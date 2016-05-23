@@ -1,4 +1,4 @@
-# Typed React
-The type definition for [react](https://github.com/facebook/react)
+# Typed Flux
+The type definition for [flux](https://github.com/facebook/flux)
 ## License
 MIT
