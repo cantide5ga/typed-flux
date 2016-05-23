@@ -183,3 +183,8 @@ declare namespace FluxUtils {
         __onDispatch(payload: any): void;
     }
 }
+
+export = {
+    FluxUtils,
+    Flux
+}
