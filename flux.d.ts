@@ -6,7 +6,7 @@
 
 import { React } from 'react';
 
-export namespace Flux {
+declare namespace Flux {
 
     /**
     * Dispatcher class
@@ -65,7 +65,7 @@ export namespace Flux {
     }
 }
 
-export namespace FluxUtils {
+declare namespace FluxUtils {
     export class Container {
         constructor();
         /**
