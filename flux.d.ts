@@ -4,9 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Typings: Michael N. Payne <https://github.com/cantide5ga/typed-flux>
 
-import { React } from 'react';
-
-export namespace Flux {
+declare namespace Flux {
     /**
     * Dispatcher class
     * Create an instance to use throughout the application.
@@ -65,6 +63,8 @@ export namespace Flux {
 }
 
 declare namespace FluxUtils {
+    import { React } from 'react';
+    
     export class Container {
         constructor();
         /**
