@@ -4,7 +4,6 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Typings: Michael N. Payne <https://github.com/cantide5ga/typed-flux>
 
-export namespace Flux {
     /**
     * Dispatcher class
     * Create an instance to use throughout the application.
@@ -18,7 +17,7 @@ export namespace Flux {
     *     var typedDispatcher = new flux.Dispatcher<MyCustomActionType>()
     *     class DerivedDispatcher extends flux.Dispatcher<MyCustomActionType> { }
     */
-    class Dispatcher<TPayload> {
+    export class Dispatcher<TPayload> {
 
         /**
         * Create an instance of the Dispatcher class to use throughout the application.
@@ -60,7 +59,6 @@ export namespace Flux {
         */
         isDispatching(): boolean;
     }
-}
 
 declare namespace FluxUtils {
     import { React } from 'react';
