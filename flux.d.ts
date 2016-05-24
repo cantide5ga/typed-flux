@@ -4,10 +4,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Typings: Michael N. Payne <https://github.com/cantide5ga/typed-flux>
 
+import { React } from 'react';
 
-
-declare module 'flux' {
-    module Flux {
+export namespace Flux {
     /**
     * Dispatcher class
     * Create an instance to use throughout the application.
@@ -63,15 +62,9 @@ declare module 'flux' {
         */
         isDispatching(): boolean;
     }
-    }
-    
-    export = Flux;
 }
 
-declare module 'flux/utils' {
-    import { Dispatcher } from 'flux';
-    import { React } from 'react';
-    namespace FluxUtils {
+declare namespace FluxUtils {
     export class Container {
         constructor();
         /**
@@ -147,7 +140,7 @@ declare module 'flux/utils' {
         /**
         * Constructs and registers an instance of this store with the given dispatcher.
         */
-        constructor(dispatcher: Dispatcher<any>);
+        constructor(dispatcher: React.Dispatcher<any>);
 
         /**
         * Adds a listener to the store, when the store changes the given callback will be called.
@@ -159,7 +152,7 @@ declare module 'flux/utils' {
         /**
         * Returns the dispatcher this store is registered with.
         */
-        getDispatcher(): Dispatcher<any>;
+        getDispatcher(): React.Dispatcher<any>;
 
         /**
         * Returns the dispatch token that the dispatcher recognizes this store by.
@@ -188,7 +181,8 @@ declare module 'flux/utils' {
         */
         __onDispatch(payload: any): void;
     }
-    }
-    
-    export = FluxUtils;
+}
+
+declare module "flux" {
+    export = Flux;
 }
